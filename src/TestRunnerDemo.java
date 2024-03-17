@@ -1,4 +1,5 @@
 import Annotations.*;
+import Assertions.Asserter;
 
 public class TestRunnerDemo {
 
@@ -29,6 +30,7 @@ public class TestRunnerDemo {
     @Test(order = 2)
     public void test2() {
         System.out.println("Тест №3");
+        Asserter.assertEquals(3, 3);
     }
 
     @Test(order = 1)
@@ -39,6 +41,7 @@ public class TestRunnerDemo {
     @Test
     public void test0() {
         System.out.println("Тест №0");
+        Asserter.assertEquals(1, 2);
     }
 
 }

@@ -2,11 +2,12 @@ package Assertions;
 
 public class Asserter {
 
-    public static void assertEquals(int expected, int actual) throws AssertionOk, AssertionFail {
+    public static void assertEquals(int expected, int actual) throws AssertionMessage {
         if (expected == actual) {
-            throw new AssertionOk("OK");
+            throw new AssertionMessage("OK");
         } else {
-            throw new AssertionFail(String.format("Expected %d, actual %d", expected, actual));
+            throw new AssertionMessage(
+                    String.format("FAIL - expected %d, actual %d", expected, actual));
         }
     }
 }

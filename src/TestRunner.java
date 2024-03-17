@@ -1,4 +1,5 @@
 import Annotations.*;
+import Assertions.AssertionMessage;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -18,6 +19,7 @@ public class TestRunner {
         List<Method> beforeEachMethods = new ArrayList<>();
         List<Method> afterAllMethods = new ArrayList<>();
         List<Method> afterEachMethods = new ArrayList<>();
+        List<String> results = new ArrayList<>();
 
         for (Method method : testClass.getDeclaredMethods()) {
             if (method.getModifiers() == Modifier.PUBLIC) {
@@ -37,26 +39,39 @@ public class TestRunner {
 
         testMethods.sort(Comparator.comparingInt(m -> m.getAnnotation(Test.class).order()));
 
-        try {
-            for (Method method : beforeAllMethods) {
-                method.invoke(testObj);
+        for (Method method : beforeAllMethods) {
+            invoke(testObj, method, results);
+        }
+        for (Method testMethod : testMethods) {
+            for (Method method : beforeEachMethods) {
+                invoke(testObj, method, results);
             }
-            for (Method testMethod : testMethods) {
-                for (Method method : beforeEachMethods) {
-                    method.invoke(testObj);
-                }
-                testMethod.invoke(testObj);
-                for (Method method : afterEachMethods) {
-                    method.invoke(testObj);
-                }
+            invoke(testObj, testMethod, results);
+            for (Method method : afterEachMethods) {
+                invoke(testObj, method, results);
             }
-            for (Method method : afterAllMethods) {
-                method.invoke(testObj);
-            }
-        } catch (IllegalAccessException | InvocationTargetException e) {
-            throw new RuntimeException(e);
+        }
+        for (Method method : afterAllMethods) {
+            invoke(testObj, method, results);
         }
 
+        System.out.println("\n\r ---- Результаты тестов ----");
+        results.stream().forEach(System.out::println);
+
+    }
+
+    private static void invoke(Object o, Method method, List results) {
+        try {
+            method.invoke(o);
+        } catch (InvocationTargetException e) {
+            if (e.getCause().getClass().equals(AssertionMessage.class)) {
+                results.add(method.getName() + ": " + e.getCause().getMessage());
+            } else {
+                e.printStackTrace();
+            }
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException("Попытка вызова недоступного метода");
+        }
     }
 
     private static Object initTestObj(Class<?> testClass) {

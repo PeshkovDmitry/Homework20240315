@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cda55d45-8336-416b-a194-bdc5ced648bc" name="Changes" comment="Реализовано тестирование по полному циклу с учётом указанного порядка тестируемых методов">
-      <change afterPath="$PROJECT_DIR$/src/Assertions/Asserter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assertions/AssertionFail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assertions/AssertionOk.java" afterDir="false" />
+    <list default="true" id="cda55d45-8336-416b-a194-bdc5ced648bc" name="Changes" comment="Начал прорабатывать Asserter">
+      <change afterPath="$PROJECT_DIR$/src/Assertions/AssertionMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assertions/Asserter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assertions/Asserter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assertions/AssertionFail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assertions/AssertionOk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestRunnerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestRunnerDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,13 +86,21 @@
       <option name="project" value="LOCAL" />
       <updated>1710693585125</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Начал прорабатывать Asserter">
+      <created>1710695379246</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710695379246</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Сделал аннотации" />
     <MESSAGE value="Сделал тестируемыый класс" />
     <MESSAGE value="Реализовано тестирование по полному циклу с учётом указанного порядка тестируемых методов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Реализовано тестирование по полному циклу с учётом указанного порядка тестируемых методов" />
+    <MESSAGE value="Начал прорабатывать Asserter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Начал прорабатывать Asserter" />
   </component>
 </project>
