@@ -26,18 +26,18 @@ public class TestRunnerDemo {
         System.out.println("Команды после всего теста");
     }
 
-    @Test(order = 3)
-    private void test1() {
+    @Test(order = 2)
+    private void test2() {
         System.out.println("Тест №3");
     }
 
     @Test(order = 1)
-    void test2() {
+    public void test1() {
         System.out.println("Тест №1");
     }
 
     @Test
-    void test3() {
+    public void test0() {
         System.out.println("Тест №0");
     }
 
