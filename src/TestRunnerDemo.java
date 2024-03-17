@@ -7,27 +7,27 @@ public class TestRunnerDemo {
     }
 
     @BeforeAll
-    private void beforeAll() {
+    public void beforeAll() {
         System.out.println("Команды перед всем тестом");
     }
 
     @BeforeEach
-    private void beforeEach() {
+    public void beforeEach() {
         System.out.println("Команды перед каждым тестом");
     }
 
     @AfterEach
-    private void afterEach() {
+    public void afterEach() {
         System.out.println("Команды после каждого теста");
     }
 
     @AfterAll
-    private void afterAll() {
+    public void afterAll() {
         System.out.println("Команды после всего теста");
     }
 
     @Test(order = 2)
-    private void test2() {
+    public void test2() {
         System.out.println("Тест №3");
     }
 
