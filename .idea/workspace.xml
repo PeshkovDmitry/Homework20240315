@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cda55d45-8336-416b-a194-bdc5ced648bc" name="Changes" comment="Сделал тестируемыый класс">
-      <change beforePath="$PROJECT_DIR$/src/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestRunner.java" afterDir="false" />
+    <list default="true" id="cda55d45-8336-416b-a194-bdc5ced648bc" name="Changes" comment="Реализовано тестирование по полному циклу с учётом указанного порядка тестируемых методов">
+      <change afterPath="$PROJECT_DIR$/src/Assertions/Asserter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assertions/AssertionFail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assertions/AssertionOk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +46,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Assertions" />
       <recent name="Annotations" />
       <recent name="" />
     </key>
@@ -72,12 +76,20 @@
       <option name="project" value="LOCAL" />
       <updated>1710679080977</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Реализовано тестирование по полному циклу с учётом указанного порядка тестируемых методов">
+      <created>1710693585125</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710693585125</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Сделал аннотации" />
     <MESSAGE value="Сделал тестируемыый класс" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделал тестируемыый класс" />
+    <MESSAGE value="Реализовано тестирование по полному циклу с учётом указанного порядка тестируемых методов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализовано тестирование по полному циклу с учётом указанного порядка тестируемых методов" />
   </component>
 </project>
