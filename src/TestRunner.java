@@ -11,7 +11,7 @@ import java.util.List;
 
 public class TestRunner {
 
-    public static void run(Class<?> testClass) {
+    public static List<String> run(Class<?> testClass) {
 
         final Object testObj = initTestObj(testClass);
         List<Method> testMethods = new ArrayList<>();
@@ -54,10 +54,7 @@ public class TestRunner {
         for (Method method : afterAllMethods) {
             invoke(testObj, method, results);
         }
-
-        System.out.println("\n\r ---- Результаты тестов ----");
-        results.stream().forEach(System.out::println);
-
+        return results;
     }
 
     private static void invoke(Object o, Method method, List results) {

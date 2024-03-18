@@ -1,10 +1,14 @@
 import Annotations.*;
 import Assertions.Asserter;
 
+import java.util.List;
+
 public class TestRunnerDemo {
 
     public static void main(String[] args) {
-        TestRunner.run(TestRunnerDemo.class);
+        List<String> results = TestRunner.run(TestRunnerDemo.class);
+        System.out.println("\n\r ---- Результаты тестов ----");
+        results.stream().forEach(System.out::println);
     }
 
     @BeforeAll
